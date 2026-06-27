@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Article = {
   id: number;
   title: string;
@@ -27,20 +29,22 @@ export default async function Home() {
         <p>記事がまだありません。</p>
       ) : (
         <ul style={{ listStyle: "none", padding: 0 }}>
-          {articles.map((articles) => (
-            <li key={articles.id}
+          {articles.map((article) => (
+            <li key={article.id}
                 style={{
                   border: "1px solid #ddd",
                   borderRadius:8,
                   padding: 16,
                   marginBottom: 12,
                 }}>
-              <h2 style={{ fontSize: 20, fontWeight: "bold" }}>
-                {articles.title}
-              </h2>
-              <p style={{ color: "#555", marginTop: 8 }}>
-                {articles.content}
-              </p>
+              <Link href={`/articles/${article.id}`}>
+                <h2 style={{ fontSize: 20, fontWeight: "bold" }}>
+                  {article.title}
+                </h2>
+                <p style={{ color: "#555", marginTop: 8 }}>
+                  {article.content}
+                </p>
+              </Link>
             </li>
           ))}
         </ul>
