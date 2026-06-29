@@ -30,7 +30,7 @@ export default function NewArticle() {
     return (
         <main style={{ maxWidth: 720, margin: "0 auto", padding: 24}}>
             <Link href="/" style={{ color: "#0070f3" }}>
-                ←　一覧に戻る
+                ← 一覧に戻る
             </Link>
             <h1 style={{ fontSize: 28, fontWeight: "bold", margin: "16px 0" }}>
                 新規投稿
