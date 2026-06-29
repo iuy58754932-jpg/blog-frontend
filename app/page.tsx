@@ -25,6 +25,16 @@ export default async function Home() {
         記事一覧
       </h1>
 
+      <Link href="/articles/new"
+            style={{
+              display: "inline-block",
+              marginBottom: 16,
+              color: "#0070f3",
+            }}
+      >
+        + 新規投稿
+      </Link>
+
       {articles.length === 0 ? (
         <p>記事がまだありません。</p>
       ) : (
